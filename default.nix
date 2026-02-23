@@ -89,7 +89,7 @@ let
     version = "latest";
     src = prev.fetchurl {
       url = "https://f001.backblazeb2.com/file/odin-binaries/nightly/odin-linux-amd64-nightly%2B2026-02-22.tar.gz";
-      hash = "";
+      hash = "sha256-7uY2nCkkBqKEqB20WUloGW6ij+YPWFGalq4W/BAQGgc=";
     };
     llvmPackages = prev.llvmPackages_18;
   };
