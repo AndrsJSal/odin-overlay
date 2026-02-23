@@ -7,7 +7,7 @@ stdenv.mkDerivation {
     owner = "DanielGavin";
     repo = "ols";
     rev = "92b8c767d233c6556ebf46072f32a02d06277363";
-    hash = "sha256-";
+    hash = "sha256-a713064736034e9d08ff332a88a5f599f23fe6bae1b8f1af9242f3de65a26cc4=";
   };
 
   buildInputs = [ odin ];
