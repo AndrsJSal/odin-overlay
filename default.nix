@@ -5,9 +5,9 @@ let
     prev.callPackage ./odin.nix {
       inherit version;
       inherit (attrs) llvmPackages;
-      src = prev.fetchzip {
+      src = prev.fetchurl {
         url =
-          "https://github.com/odin-lang/Odin/archive/refs/tags/${version}.zip";
+          "https://f001.backblazeb2.com/file/odin-binaries/nightly/odin-linux-amd64-nightly%2B2026-02-22.tar.gz";
         inherit (attrs) hash;
       };
     };
@@ -87,11 +87,9 @@ let
 
   odin-latest = prev.callPackage ./odin.nix {
     version = "latest";
-    src = prev.fetchFromGitHub {
-      owner = "odin-lang";
-      repo = "Odin";
-      rev = "1f187adff455a8de499b73e1ccf9210bd8f830c9";
-      hash = "sha256-YwDaMvqxS3G4rTrKDSmWVTKBk15JjNtwuK10hDBtP7g=";
+    src = prev.fetchurl {
+      url = "https://f001.backblazeb2.com/file/odin-binaries/nightly/odin-linux-amd64-nightly%2B2026-02-22.tar.gz";
+      hash = "";
     };
     llvmPackages = prev.llvmPackages_18;
   };
