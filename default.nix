@@ -94,5 +94,5 @@ let
     llvmPackages = prev.llvmPackages_18;
   };
 
-  ols = prev.callPackage ./ols.nix { odin = odin-latest; };
-in { odin-pkgs = release-pkgs-llvm17 // release-pkgs-sroa-llvm17 // release-pkgs-llvm18 // { inherit ols odin-latest; }; }
+  # ols = prev.callPackage ./ols.nix { odin = odin-latest; };
+in { odin-pkgs = release-pkgs-llvm17 // release-pkgs-sroa-llvm17 // release-pkgs-llvm18 // { inherit odin-latest; }; }
